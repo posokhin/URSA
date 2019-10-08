@@ -1,0 +1,93 @@
+.character{
+    padding: 50px 0 100px;
+    background-color: #f8f9fa;
+    overflow: hidden;
+    position: relative;
+    img{
+        position: absolute;
+        top: 100px;
+        left: auto;
+        transform: translateX(-70px);
+        @include media(768){
+            display: none;
+        }
+    }
+    h2{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    &__table{
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        min-width: 1000px;
+        &-wrap{
+            overflow: auto;
+        }
+        td.red{
+            color: #ea4740;
+        }
+        td{
+            font-weight: 700;
+            color: #696f83;
+        }
+        thead{
+            display: block;
+            background-color: #232f61;
+            color: white;
+            tr{
+                display: flex;
+                td{
+                    color: white;
+                    width: 20%;
+                    padding: 15px;
+                    border-right: 1px solid rgba(233, 236, 239, .5);
+                    &:first-child{
+                        padding-left: 80px;
+                        @include media(768){
+                            padding-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        tbody{
+            display: block;
+            tr{
+                display: flex;
+                &:nth-child(even){
+                    background-color: #e9ebf0;
+                    td{
+                        color: #474b59;   
+                    }
+                }
+                &:nth-child(odd){
+                    td{
+                        border-right: 1px solid rgba(233, 236, 239, .5);  
+                    }
+                }
+                td{
+                    padding: 10px 15px;
+                    width: 20%;
+                    &:first-child{
+                        padding-left: 80px;
+                        @include media(768){
+                            padding-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        &-child{
+            display: block;
+            tr{
+                display: flex;
+                justify-content: space-between;
+            }
+            td{
+                padding: 0 !important;
+                flex: 1;
+            }
+        }
+    }
+}

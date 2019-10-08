@@ -1,0 +1,159 @@
+.footer{
+    padding: 40px 0;
+    &__top{
+        margin: 0 -15px;
+        justify-content: space-between;
+        @include media(648){
+            justify-content: center;
+            margin: 0;
+        }
+    }
+    &__logo{
+        padding: 0 15px;
+    }
+    &__contacts{
+        padding: 0 15px;
+        @include media(1084){
+            padding: 0;
+        }
+        @include media(825){
+            margin-top: 20px;
+            padding: 0;
+        }
+        &-left{
+            width: 50%;
+            padding: 0 15px;
+            @include media(1084){
+                width: auto;
+            }
+            @include media(648){
+                width: 100%;
+                padding: 0;
+                text-align: center;
+            }
+            p{
+                color: #232f61;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 29.3px;
+                margin-bottom: 10px;    
+            }
+            span{
+                color: #696f83;
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+        &-right{
+            width: 50%;
+            padding: 0 15px;
+            padding-left: 25px;
+            position: relative;
+            @include media(1084){
+                width: auto;
+            }
+            @include media(648){
+                margin-top: 10px;
+                width: 100%;
+                padding: 0;
+                text-align: center;
+                &::before{
+                    display: none;
+                }
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 4px;
+                height: 100%;
+                background-color: #ea4740;
+            }
+            a{
+                color: #696f83;
+                display: block;
+                font-size: 18px;
+                line-height: 26px;
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    &__social{
+        margin-left: auto;
+        padding: 0 15px;
+        @include media(1084){
+            margin: 20px 0 0;
+        }
+        .share-page{
+            color: #696f83;  
+            i{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: #ea4740;
+                color: white;
+                font-size: 14px;
+                margin-right: 10px;
+            }
+        }
+        &-list{
+            margin-top: 20px;
+            @include media(648){
+                justify-content: center;
+            }
+        }
+        &-item{
+            margin-right: 15px;
+            &:last-child{
+                margin-right: 0;
+            }
+            a{
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                background: #58648b;
+                color: white;
+                font-size: 20px;
+                transition: .3s;
+                &:hover{
+                    background: white;
+                    border: 1px solid black;
+                    color: black;
+                }
+            }
+        }
+    }
+    &__bottom{
+        margin-top: 40px;
+        padding-top: 16px;
+        border-top: 1px solid #e9ebf0;
+        p{
+            color: #989daf;
+            font-size: 14px;
+            line-height: 25px;
+            @include media(648){
+                width: 100%;
+                text-align: center;
+            }
+        }
+        a{
+            color: #989daf;
+            font-size: 14px;
+            line-height: 25px; 
+            @include media(648){
+                width: 100%;
+                text-align: center;
+            }
+            @include media(421){
+                margin-top: 20px;
+            }
+            p{
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

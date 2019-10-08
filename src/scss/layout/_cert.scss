@@ -1,0 +1,110 @@
+.certificates{
+    padding-bottom: 100px;
+    @include media(768){
+        padding-bottom: 50px;
+    }
+    &__top{
+        margin: 0 -15px;
+        margin-bottom: 30px;
+        @include media(768){
+            margin: 0 0 30px;
+        }
+
+        &-title{
+            width: 50%;
+            padding: 0 15px;
+            @include media(768){
+                width: 100%;
+                padding: 0;
+                h2{
+                    text-align: center;
+                    font-size: 28px;
+                }
+            }
+            h2{
+                font-size: 40px;
+                span{
+                    display: block;
+                    color: #ea4740;  
+                }
+            }
+        }
+        &-desc{
+            width: 50%;
+            padding: 0 15px;
+            position: relative;
+            @include media(768){
+                width: 100%;
+                padding: 0;
+                &::before{
+                    position: initial;
+                    width: 100%;
+                    height: 4px;
+                    margin: 10px 0;
+                }
+                p{
+                    text-align: center;
+                }
+            }
+            &::before{
+                content: "";
+                display: block;
+                width: 4px;
+                height: 56px;
+                background: #ea4740;
+                border-radius: 10px;  
+                position: absolute;
+                left: 0; 
+                top: 50%;
+                transform: translateY(-50%);  
+            }
+            p{
+                color: #474b59;
+                font-size: 18px;
+                line-height: 25px;      
+            }
+        }
+    }
+    &__list{
+        margin-bottom: 70px;
+    }
+    &__item{
+        @include media(489){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &-img{
+            margin-bottom: 5px;
+            img{
+                
+            }
+        }
+        a{
+            display: block;
+            color: #474b59;
+            line-height: 24px;
+            text-decoration: underline;   
+            margin-bottom: 20px;    
+        }
+        .format{
+            img{
+                margin-right: 10px;
+            }
+            span{
+                color: #ea4740; 
+            }
+        }
+    }
+}
+.swiper-scrollbar{
+    height: 6px;
+    border-radius: 3px;
+    background-color: #e9ebf0;
+}
+.swiper-scrollbar-drag{
+    display: block;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #ea4740;
+}

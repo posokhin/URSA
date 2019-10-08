@@ -1,0 +1,27 @@
+.save{
+    &__bottom{
+        padding: 25px;
+        border-radius: 6px;
+        background-color: #f6ed61;
+        @include media(879){
+            p{
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+        img{
+            min-width: 24px;
+            height: 24px;
+            margin-right: 16px;
+        }
+        p{
+            width: 95%;
+            color: #212529;
+            font-size: 14px;
+            line-height: 22px;
+            span{
+                color: #ea4740; 
+            }
+        }
+    }
+}

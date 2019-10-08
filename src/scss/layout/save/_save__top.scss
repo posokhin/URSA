@@ -1,0 +1,61 @@
+.save{
+    padding: 100px 0;
+    @include media(768){
+        padding: 50px 0;
+    }
+    &__top{
+        margin-bottom: 90px;
+        @include media(768){
+            margin-bottom: 50px;
+        }
+        &-left{
+            width: 60%;
+            @include media(768){
+                width: 100%;
+                text-align: center;
+            }
+            h2{
+                max-width: 592px;
+                @include media(1000){
+                    font-size: 35px;
+                }
+                @include media(768){
+                    max-width: 100%;
+                    font-size: 28px;
+                }
+            }
+        }
+        &-right{
+            width: 40%;
+            @include media(768){
+                width: 100%;
+                display: block;
+                &::before{
+                    height: 4px;
+                    margin: 10px 0;
+                }
+                p{
+                    max-width: 100%;
+                    font-size: 16px;
+                    text-align: center;
+                }
+            }
+            &::before{
+                content: "";
+                display: block;
+                min-width: 4px;
+                height: 114px;
+                background: #ea4740;
+                border-radius: 10px;
+                margin-right: 40px;
+            }
+            p{
+                color: #474b59;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 25px;
+                max-width: 410px;
+            }
+        }
+    }
+}

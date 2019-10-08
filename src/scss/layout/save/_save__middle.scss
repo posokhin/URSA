@@ -1,0 +1,73 @@
+.save{
+    &__middle{
+        margin-bottom: 40px;
+        &-left{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            position: relative;
+            @include media(768){
+                width: 100%;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+            &-tooltip{
+                position: absolute;
+                top: -30px;
+                right: 50px;
+                @include media(768){
+                    text-align: left;
+                    position: initial;
+                    order: -1;
+                }
+                p{
+                    color: #232f61;
+                    font-weight: 700;
+                    letter-spacing: 0.3px;   
+                    span{
+                        color: #ea4740;
+                    }   
+                }
+            }
+        }
+        &-right{
+            width: 40%;
+            @include media(768){
+                width: 100%;
+            }
+            &-list{
+                border-radius: 6px;
+                background-color: #f1f3f5;
+                padding: 28px 34px;
+                &-item{
+                    display: flex;
+                    margin: 0 auto;
+                    padding: 28px 0;
+                    border-bottom: 1px solid rgba(35, 47, 97, 0.05);
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                    &-inner{
+                        max-width: 245px;
+                        width: 100%;
+                        margin: 0 auto;
+                    }
+                    &-txt{
+                        margin-left: 28px;
+                        p{
+                            color: #232f61;
+                            font-weight: 700;
+                            letter-spacing: 0.3px;
+                            margin-bottom: 3px;
+                        }
+                        span{
+                            color: #868e96;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

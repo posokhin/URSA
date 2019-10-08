@@ -1,0 +1,98 @@
+.header{
+    background-color: #232f61; 
+    padding: 16px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    &__row{
+        justify-content: space-between;
+    }
+    &__menu{
+        width: auto;
+        padding: 0 15px;
+        @include media(834){
+            margin-top: 20px;
+            padding: 0;
+            width: 100%;
+            justify-content: space-between;
+        }
+        @include media(768){
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 73px;
+            flex-direction: column;
+            background-color: #232f61;
+            margin: 0;
+            padding: 15px;
+            align-items: flex-start;
+            &-item{
+                margin-bottom: 20px;
+            }
+        }
+        &-item{
+            margin-right: 25px;
+            &:last-child{
+                margin-right: 0;
+            }
+            a{
+                color: white;
+                letter-spacing: 0.5px;
+                transition: .3s;
+                &:hover{
+                    color: #ea4740;
+                }
+            }
+        }
+    }
+    &__link-site{
+        @include media(940){
+            margin-top: 20px;
+        }
+        @include media(768){
+            margin-top: 0;
+            margin-left: auto;
+        }
+        a{
+            color: white;
+            span{
+                margin-left: 8px;
+            }
+        }
+    }
+    &__burger{
+        display: none;
+        width: 30px;
+        height: 20px;
+        margin-left: 20px;
+        cursor: pointer;
+        position: relative;
+        @include media(768){
+            display: flex;
+        }
+        span{
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: white;
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: white;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: white;    
+            }
+        }
+    }
+}

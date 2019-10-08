@@ -1,0 +1,172 @@
+.feedback{
+    color: white;
+    &__left{
+        padding: 60px 0;
+        background-color: #4e708d;   
+        width: 60%;
+        @include media(900){
+            width: 100%;
+        }
+        &-inner{
+            max-width: 800px;
+            margin-left: auto;
+            padding: 0 60px;
+            @include media(900){
+                padding: 0 15px;
+                margin: 0 auto;
+            }
+            @include media(500){
+                a{
+                    margin: 0 auto;
+                }
+            }
+        }
+        &-image{
+            margin-bottom: 30px;
+        }
+        &-top{
+            margin: 0 -15px;
+            margin-bottom: 40px;
+            @include media(500){
+                margin: 0;
+                margin-bottom: 40px;
+            }
+            &-title{
+                width: 60%;
+                padding: 0 15px;
+                @include media(500){
+                    width: 100%;
+                    padding: 0;
+                    text-align: center;
+                    h2{
+                        font-size: 28px;
+                        max-width: 100%;
+                    }
+                }
+                h2{
+                    color: #ffffff;
+                    font-size: 32px;
+                    font-weight: 500;
+                    line-height: 40px;
+                    max-width: 270px;
+                }
+            }
+            &-desc{
+                width: 40%;
+                padding: 0 15px;
+                position: relative;
+                padding-left: 30px;
+                @include media(500){
+                    width: 100%;
+                    padding: 0;
+                    &::before{
+                        position: initial;
+                        margin: 10px 0;
+                        width: 100%;
+                        height: 4px;
+                    }
+                    p{
+                        max-width: 100%;
+                        text-align: center;
+                    }
+                }
+                &::before{
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    content: "";
+                    display: block;
+                    width: 4px;
+                    background: #ea4740;
+                    border-radius: 10px;
+                    height: 76px;
+                }
+                p{
+                    color: #ffffff;
+                    font-size: 18px;
+                    line-height: 26px;     
+                    max-width: 190px;
+                }
+            }
+        }
+    }
+    &__right{
+        padding: 60px 0;
+        background-color: #6796a9;
+        width: 40%; 
+        @include media(900){
+            width: 100%;
+        }
+        &-inner{
+            max-width: 500px;
+            margin-right: auto;
+            padding: 0 60px;
+            @include media(900){
+                padding: 0 15px;
+                margin: 0 auto;
+            }
+        }
+        &-top{
+            margin-bottom: 50px;
+            @include media(920){
+                flex-direction: column;
+                text-align: center;
+                &-desc{
+                    margin-left: 0;
+                    margin-top: 10px;
+                }
+            }
+            &-desc{
+                margin-left: 24px;
+                p{
+                    opacity: 0.7;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 24px;    
+                }
+                span{
+                    display: block;
+                    font-weight: 700;
+                    line-height: 18px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+    &__form{
+        label{
+            display: block;
+            color: white;
+            line-height: 26px;
+            margin-bottom: 16px;
+            p{
+                margin-bottom: 4px;
+                span{
+                    display: inline-block;
+                    margin-left: 5px;
+                    color: #ea4740;    
+                }
+            }
+            input{
+                max-width: 384px;
+                width: 100%;
+                height: 48px;
+                border: 0;
+                border-radius: 4px;
+                background-color: #ffffff;   
+                padding-left: 15px;  
+                @include media(900){
+                    max-width: 100%;
+                }
+            }
+            textarea{
+                @extend input;
+                resize: none;
+                height: 126px;
+                padding: 15px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
